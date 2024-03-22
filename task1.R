@@ -2,9 +2,21 @@
 
 data=read.csv("Task1.csv")
 #read file in R
-data
+data #print file
 dim(data)
 # number of rows and cols
+
+
+#cleaning data
+#duplicate
+sum(duplicated(data)) #number of duplicate in all data set
+library(dplyr)
+new_data=distinct(data)#remove duplicate
+dim(new_data)
+#null
+sum(is.na(data))#number of null in all data set
+new_data=na.omit(data)# remove null
+dim(new_data)
 
 # visualize of Age 
 
